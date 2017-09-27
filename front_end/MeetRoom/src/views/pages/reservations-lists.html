@@ -1,0 +1,38 @@
+<div class="favorite-rooms content-area clearfix">
+    <div class="container">
+        <div class="main-title">
+            <h1>Reservations lists</h1>
+            <p>Here is the list of all reservations</p>
+        </div>
+        <div *ngFor="let reservation of reservations" class="col-md-6 col-sm-6">
+                <div class="thumbnail rooms-box clearfix">
+                    <div class="caption detail">
+                        <header class="clearfix">
+                            <div class="pull-left">
+                                <h5 class="title">
+                                    <a href="#">{{ reservation.room.name }}</a>
+                                </h5>
+                                <ul *ngIf="reservation.room.equipements.length > 0" class="custom-list">
+                                    <li *ngFor="let equipement of reservation.room.equipements">
+                                        <a href="#">{{ equipement.name }} 
+                                            <span *ngIf="equipement != reservation.room.equipements[(reservation.room.equipements.length - 1)]"> / </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                       </header>
+                        
+                        <p>{{ reservation.room.description }} </p>
+                        
+                        <ul class="facilities-list clearfix">
+                            <li>
+                                <i class="fa fa-calendar"></i>
+                                <span>{{ reservation.date }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+    </div>
+</div>

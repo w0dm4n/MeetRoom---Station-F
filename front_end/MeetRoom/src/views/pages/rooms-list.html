@@ -1,0 +1,78 @@
+<div class="favorite-rooms content-area clearfix">
+    <div class="container">
+        <div class="main-title">
+            <h1>Rooms list</h1>
+            <p>Here is the list of our available rooms</p>
+        </div>
+        <div class="search-bar-inner" style="text-align: center;">
+                    <div class="row">
+                    <div class="col-lg-3">
+                    </div>
+                    <div class="col-lg-3">
+                            <div class="form-group">
+                                <select [(ngModel)]="searchType" name="type" class="form-control" id="type">
+                                    <option disabled [selected]>Search by</option>
+                                    <option>Name</option>
+                                    <option>Capacity</option>
+                                    <option>Equipements</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                               <input type="text" [ngModel]="searchContent" (ngModelChange)="onSearchChange($event)" name="content"/>
+                            </div>
+                        </div>
+                    </div>
+                <div class="clearfix"></div>
+            </div>
+            <div *ngIf="successMessage" class="alert alert-success alert-dismissable">
+                <a href="#" (click)="clearSuccessMessage()" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <strong>Success!</strong> {{ successMessage }}
+            </div>
+            <div *ngIf="errorMessage" class="alert alert-danger alert-dismissable">
+                <a href="#" (click)="clearErrorMessage()" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <strong>Error!</strong> {{ errorMessage }}
+            </div>            
+        <div *ngFor="let room of rooms | filterSearch: searchRooms" class="col-md-6 col-sm-6 col-xs-12">
+                <div class="thumbnail rooms-box clearfix">
+                    <div class="caption detail">
+                        <header class="clearfix">
+                            <div class="pull-left">
+                                <h5 class="title">
+                                    <a href="#">{{ room.name }}</a>
+                                </h5>
+                                <ul *ngIf="room.equipements.length > 0" class="custom-list">
+                                    <li *ngFor="let equipement of room.equipements">
+                                        <a href="#">{{ equipement.name }} 
+                                            <span *ngIf="equipement != room.equipements[(room.equipements.length - 1)]"> / </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                       </header>
+                        
+                        <p>{{ room.description }} </p>
+                        
+                        <ul class="facilities-list clearfix">
+                            <li>
+                                <i class="fa fa-address-book"></i>
+                                <span>{{ room.capacity }} places</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="btn-div">
+                            <a onmouseover="this.style.cursor='pointer';" (click)="reserveRoom(room.id)">
+                                <span class="read-more">Reserve me</span>
+                                <span class="icon-arrow-right2 bg-danger">
+                                    <i class="fa  fa-angle-right"></i>
+                                </span>
+                            </a><br/>
+                            <input style="position: absolute;margin-left: 8px;margin-top: -20px;max-width:180px;" type="datetime-local" name="reservationDate" [(ngModel)]="reservationDate">
+                        </div>
+                    </div>
+                </div> 
+            </div>
+    </div>
+</div>
