@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Reservations — MeetRoom</title>
+  <meta name="description" content="View and manage all your room reservations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="MeetRoom home">
+          <span class="nav__logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6zm3-1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H6zm2 3h8v2H8V8zm0 4h5v2H8v-2z"/>
+            </svg>
+          </span>
+          MeetRoom
+        </a>
+
+        <ul class="nav__links" role="list">
+          <li>
+            <a href="index.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__dropdown">
+            <a href="rooms.html" class="nav__link" aria-haspopup="true">
+              Rooms
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="14" height="14">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </a>
+            <ul class="nav__dropdown-menu" role="menu">
+              <li role="none">
+                <a href="rooms.html" class="nav__dropdown-item" role="menuitem">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  View all rooms
+                </a>
+              </li>
+              <li role="none">
+                <a href="reservations.html" class="nav__dropdown-item" role="menuitem">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  My reservations
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="nav__cta">
+          <a href="rooms.html" class="btn btn--primary btn--sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            New booking
+          </a>
+        </div>
+
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMobile" aria-label="Toggle navigation">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav__mobile" id="navMobile" aria-hidden="true">
+      <a href="index.html" class="nav__mobile-link">Home</a>
+      <a href="rooms.html" class="nav__mobile-link">Browse Rooms</a>
+      <a href="reservations.html" class="nav__mobile-link is-active" aria-current="page">My Reservations</a>
+      <a href="rooms.html" class="btn btn--primary mt-4">New booking</a>
+    </div>
+  </nav>
+
+  <main class="page-main" id="main-content">
+
+    <!-- Page header -->
+    <header class="page-header">
+      <div class="container">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+          <div>
+            <div class="page-header__eyebrow" aria-hidden="true">Your bookings</div>
+            <h1 class="page-header__title">My reservations</h1>
+            <p class="page-header__desc">All your upcoming and past room reservations in one place.</p>
+          </div>
+          <a href="rooms.html" class="btn btn--primary" style="align-self:flex-end;flex-shrink:0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Book a new room
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="section section--sm">
+      <div class="container">
+
+        <!-- Alerts container -->
+        <div id="alertContainer" role="alert" aria-live="polite"></div>
+
+        <!-- Results meta -->
+        <div class="results-count" id="resultsCount" aria-live="polite" aria-atomic="true" style="display:none;">
+          <strong id="resultsNum">0</strong> reservations total
+        </div>
+
+        <!-- Reservations grid -->
+        <div class="reservations-grid" id="reservationsGrid" aria-label="Your reservations">
+          <!-- Skeleton while loading -->
+          <div class="reservation-card" aria-hidden="true" id="skel-1">
+            <div class="reservation-card__header">
+              <div class="skeleton" style="width:44px;height:44px;border-radius:var(--radius-lg);flex-shrink:0;"></div>
+              <div style="flex:1;">
+                <div class="skeleton" style="height:18px;width:55%;margin-bottom:8px;"></div>
+                <div class="skeleton" style="height:12px;width:80%;"></div>
+              </div>
+            </div>
+            <div class="skeleton" style="height:14px;width:90%;margin-bottom:4px;"></div>
+            <div class="skeleton" style="height:14px;width:70%;"></div>
+            <div class="skeleton" style="height:40px;border-radius:var(--radius-lg);"></div>
+          </div>
+          <div class="reservation-card" aria-hidden="true" id="skel-2">
+            <div class="reservation-card__header">
+              <div class="skeleton" style="width:44px;height:44px;border-radius:var(--radius-lg);flex-shrink:0;"></div>
+              <div style="flex:1;">
+                <div class="skeleton" style="height:18px;width:60%;margin-bottom:8px;"></div>
+                <div class="skeleton" style="height:12px;width:75%;"></div>
+              </div>
+            </div>
+            <div class="skeleton" style="height:14px;width:85%;margin-bottom:4px;"></div>
+            <div class="skeleton" style="height:14px;width:65%;"></div>
+            <div class="skeleton" style="height:40px;border-radius:var(--radius-lg);"></div>
+          </div>
+          <div class="reservation-card" aria-hidden="true" id="skel-3">
+            <div class="reservation-card__header">
+              <div class="skeleton" style="width:44px;height:44px;border-radius:var(--radius-lg);flex-shrink:0;"></div>
+              <div style="flex:1;">
+                <div class="skeleton" style="height:18px;width:50%;margin-bottom:8px;"></div>
+                <div class="skeleton" style="height:12px;width:70%;"></div>
+              </div>
+            </div>
+            <div class="skeleton" style="height:14px;width:80%;margin-bottom:4px;"></div>
+            <div class="skeleton" style="height:14px;width:55%;"></div>
+            <div class="skeleton" style="height:40px;border-radius:var(--radius-lg);"></div>
+          </div>
+        </div>
+
+        <!-- Empty state -->
+        <div class="empty-state" id="emptyState" style="display:none;" role="status">
+          <svg class="empty-state__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          <div class="empty-state__title">No reservations yet</div>
+          <p class="empty-state__desc">You haven't made any reservations. Browse available rooms to get started.</p>
+          <a href="rooms.html" class="btn btn--primary mt-4">Browse rooms</a>
+        </div>
+
+        <!-- Error state -->
+        <div class="empty-state" id="errorState" style="display:none;" role="alert">
+          <svg class="empty-state__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--color-error);">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          <div class="empty-state__title">Could not load reservations</div>
+          <p class="empty-state__desc">Make sure the backend server is running at <code style="font-size:0.8em;background:var(--color-bg);padding:2px 6px;border-radius:4px;">http://localhost:8080</code></p>
+          <button class="btn btn--primary mt-4" onclick="loadReservations()">Try again</button>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">MeetRoom</div>
+          <p class="footer__brand-desc">Simple, elegant room booking for modern teams.</p>
+        </div>
+        <div>
+          <div class="footer__col-title">Rooms</div>
+          <ul class="footer__links">
+            <li><a href="rooms.html" class="footer__link">Browse rooms</a></li>
+            <li><a href="reservations.html" class="footer__link">My reservations</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Company</div>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">About us</a></li>
+            <li><a href="#" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Support</div>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Help center</a></li>
+            <li><a href="#" class="footer__link">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2024 MeetRoom. All rights reserved.</span>
+        <div class="footer__bottom-links">
+          <a href="#" class="footer__bottom-link">Privacy</a>
+          <a href="#" class="footer__bottom-link">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

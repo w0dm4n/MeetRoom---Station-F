@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeetRoom — Smart Room Booking</title>
+  <meta name="description" content="Book meeting and conference rooms effortlessly. Find the perfect space for your team.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="MeetRoom home">
+          <span class="nav__logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6zm3-1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H6zm2 3h8v2H8V8zm0 4h5v2H8v-2z"/>
+            </svg>
+          </span>
+          MeetRoom
+        </a>
+
+        <ul class="nav__links" role="list">
+          <li>
+            <a href="index.html" class="nav__link is-active" aria-current="page">Home</a>
+          </li>
+          <li class="nav__dropdown">
+            <a href="rooms.html" class="nav__link" aria-haspopup="true">
+              Rooms
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="14" height="14">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </a>
+            <ul class="nav__dropdown-menu" role="menu" aria-label="Rooms submenu">
+              <li role="none">
+                <a href="rooms.html" class="nav__dropdown-item" role="menuitem">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  View all rooms
+                </a>
+              </li>
+              <li role="none">
+                <a href="reservations.html" class="nav__dropdown-item" role="menuitem">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  My reservations
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="nav__cta">
+          <a href="rooms.html" class="btn btn--primary btn--sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Book a room
+          </a>
+        </div>
+
+        <!-- Mobile toggle -->
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMobile" aria-label="Toggle navigation">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="nav__mobile" id="navMobile" aria-hidden="true">
+      <a href="index.html" class="nav__mobile-link is-active" aria-current="page">Home</a>
+      <a href="rooms.html" class="nav__mobile-link">Browse Rooms</a>
+      <a href="reservations.html" class="nav__mobile-link">My Reservations</a>
+      <a href="rooms.html" class="btn btn--primary mt-4">Book a room</a>
+    </div>
+  </nav>
+
+  <main class="page-main" id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__inner">
+
+          <!-- Left: copy -->
+          <div class="hero__content">
+            <div class="hero__badge" aria-hidden="true">
+              <span class="hero__badge-dot"></span>
+              Rooms available now
+            </div>
+
+            <h1 class="hero__title" id="hero-title">
+              Book the perfect<br>
+              <span class="hero__title-accent">meeting space</span><br>
+              in seconds
+            </h1>
+
+            <p class="hero__desc">
+              Find, reserve, and manage conference rooms for your team. Simple, fast, and always available.
+            </p>
+
+            <div class="hero__actions">
+              <a href="rooms.html" class="btn btn--primary btn--lg">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Browse rooms
+              </a>
+              <a href="reservations.html" class="btn btn--ghost btn--lg">
+                View my reservations
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+
+            <div class="hero__stats" aria-label="Platform statistics">
+              <div>
+                <div class="hero__stat-value">12+</div>
+                <div class="hero__stat-label">Meeting rooms</div>
+              </div>
+              <div>
+                <div class="hero__stat-value">200+</div>
+                <div class="hero__stat-label">Bookings made</div>
+              </div>
+              <div>
+                <div class="hero__stat-value">98%</div>
+                <div class="hero__stat-label">Satisfaction rate</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: live preview card -->
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__card">
+              <div class="hero__card-header">
+                <span class="hero__card-title">Available Today</span>
+                <span class="hero__card-badge">Live</span>
+              </div>
+              <ul class="hero__room-list">
+                <li class="hero__room-item">
+                  <div class="hero__room-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  </div>
+                  <div class="hero__room-info">
+                    <div class="hero__room-name">Boardroom Alpha</div>
+                    <div class="hero__room-cap">Up to 12 people</div>
+                  </div>
+                  <span class="hero__room-status hero__room-status--free">Free</span>
+                </li>
+                <li class="hero__room-item">
+                  <div class="hero__room-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  </div>
+                  <div class="hero__room-info">
+                    <div class="hero__room-name">Creative Studio</div>
+                    <div class="hero__room-cap">Up to 8 people</div>
+                  </div>
+                  <span class="hero__room-status hero__room-status--busy">Busy</span>
+                </li>
+                <li class="hero__room-item">
+                  <div class="hero__room-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  </div>
+                  <div class="hero__room-info">
+                    <div class="hero__room-name">Focus Room 3</div>
+                    <div class="hero__room-cap">Up to 4 people</div>
+                  </div>
+                  <span class="hero__room-status hero__room-status--free">Free</span>
+                </li>
+                <li class="hero__room-item">
+                  <div class="hero__room-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  </div>
+                  <div class="hero__room-info">
+                    <div class="hero__room-name">Training Room B</div>
+                    <div class="hero__room-cap">Up to 20 people</div>
+                  </div>
+                  <span class="hero__room-status hero__room-status--free">Free</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats strip -->
+    <div class="stats-strip" aria-label="Key metrics">
+      <div class="container">
+        <div class="stats-strip__inner">
+          <div class="stat-item">
+            <div class="stat-item__value">12</div>
+            <div class="stat-item__label">Conference rooms</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item__value">6</div>
+            <div class="stat-item__label">Floors covered</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item__value">200+</div>
+            <div class="stat-item__label">Reservations this month</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item__value">24/7</div>
+            <div class="stat-item__label">Booking availability</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <section class="section" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <div class="section-eyebrow">Why MeetRoom</div>
+          <h2 class="heading-2" id="features-title">Everything your team needs</h2>
+          <p class="text-lead mt-4" style="max-width: 540px; margin-inline: auto;">
+            Streamlined room booking with real-time availability, equipment tracking, and instant confirmation.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Real-time availability</h3>
+            <p class="feature-card__desc">
+              See which rooms are free right now. Instant updates mean no double-bookings or conflicts.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Team-ready spaces</h3>
+            <p class="feature-card__desc">
+              Filter by capacity, equipment, and features to find rooms that fit your team size and needs.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">One-click booking</h3>
+            <p class="feature-card__desc">
+              Pick a date, choose your room, and confirm in seconds. No lengthy forms or approval chains.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Equipment included</h3>
+            <p class="feature-card__desc">
+              Each room listing shows available equipment — projectors, whiteboards, video conferencing setups.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Manage reservations</h3>
+            <p class="feature-card__desc">
+              View all upcoming bookings in one place. Cancel or modify reservations with ease.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Smart search</h3>
+            <p class="feature-card__desc">
+              Search rooms by name, capacity, or equipment. Find exactly what you need before committing.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="section section--sm">
+      <div class="container">
+        <div class="cta-banner" aria-labelledby="cta-title">
+          <div class="cta-banner__inner">
+            <div>
+              <h2 class="cta-banner__title" id="cta-title">Ready to book your next meeting?</h2>
+              <p class="cta-banner__desc">
+                Browse all available rooms and make a reservation in under a minute.
+              </p>
+            </div>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; flex-shrink: 0;">
+              <a href="rooms.html" class="btn btn--lg" style="background: #ffffff; color: var(--color-primary); border-color: transparent;">
+                Browse rooms
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="reservations.html" class="btn btn--ghost btn--lg">
+                View reservations
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">MeetRoom</div>
+          <p class="footer__brand-desc">
+            Simple, elegant room booking for modern teams. Find your space and get to work.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Rooms</div>
+          <ul class="footer__links">
+            <li><a href="rooms.html" class="footer__link">Browse rooms</a></li>
+            <li><a href="reservations.html" class="footer__link">My reservations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Company</div>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">About us</a></li>
+            <li><a href="#" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Support</div>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Help center</a></li>
+            <li><a href="#" class="footer__link">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2024 MeetRoom. All rights reserved.</span>
+        <div class="footer__bottom-links">
+          <a href="#" class="footer__bottom-link">Privacy</a>
+          <a href="#" class="footer__bottom-link">Terms</a>
+          <a href="#" class="footer__bottom-link">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
