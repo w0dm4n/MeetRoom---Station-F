@@ -1,14 +1,15 @@
 {
   "version": 1,
-  "prompt": "(workspace — preparing assets)",
+  "prompt": "Improve the overall UI/UX of this existing website. Review the current codebase, identify pain points (layout, typography, color contrast, spacing, responsiveness, navigation flow, accessibility), and implement a polished, modern redesign. The end result should feel cohesive, professional, and visually refined.\n\nTech stack chosen by the user: HTML/CSS/JS (Vanilla)\nYou MUST use this stack. Do not suggest or use a different one.\n\n## Static Output Constraint\nThe output MUST be fully static files — NO build step, NO dev server, NO package.json required.\n- The project must work by simply opening index.html in a browser\n- Use CDN links for libraries (Tailwind CSS via CDN, Alpine.js, GSAP, AOS, etc.)\n- All assets (images, fonts, icons) must use relative paths\n- Do NOT use React, Vue, Next.js, Vite, or any framework requiring npm/node\n- Keep structure simple: index.html at root, css/ folder, js/ folder, images/ folder",
   "options": {
     "outputDir": "/data/projects/taskforce-7a1f903c-27fa-4444-a774-84839d7bfe72",
-    "maxAgents": 0,
-    "model": "none",
-    "ceoModel": "none"
+    "gitUrl": "https://github.com/w0dm4n/MeetRoom---Station-F.git",
+    "maxAgents": 3,
+    "model": "claude-sonnet-4-6",
+    "ceoModel": "claude-sonnet-4-6"
   },
   "projectPath": "/data/projects/taskforce-7a1f903c-27fa-4444-a774-84839d7bfe72",
-  "phase": "preparation",
+  "phase": "done",
   "agents": [],
   "namePool": [],
   "nameIndex": 0,
@@ -16,6 +17,6 @@
   "kanbanCounter": 0,
   "previewPort": null,
   "sprintNumber": 0,
-  "startedAt": 1776219925052,
-  "lastSavedAt": 1776219925052
+  "startedAt": 1776219925882,
+  "lastSavedAt": 1776219925882
 }
