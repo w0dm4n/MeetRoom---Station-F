@@ -1,14 +1,15 @@
 {
   "version": 1,
-  "prompt": "(workspace — preparing assets)",
+  "prompt": "Improve the home page UI/UX",
   "options": {
     "outputDir": "/data/projects/taskforce-b845bf76-2893-4302-9a96-0f069508913f",
-    "maxAgents": 0,
-    "model": "none",
-    "ceoModel": "none"
+    "gitUrl": "https://github.com/w0dm4n/MeetRoom---Station-F.git",
+    "maxAgents": 3,
+    "model": "claude-sonnet-4-6",
+    "ceoModel": "claude-sonnet-4-6"
   },
   "projectPath": "/data/projects/taskforce-b845bf76-2893-4302-9a96-0f069508913f",
-  "phase": "preparation",
+  "phase": "done",
   "agents": [],
   "namePool": [],
   "nameIndex": 0,
@@ -16,6 +17,6 @@
   "kanbanCounter": 0,
   "previewPort": null,
   "sprintNumber": 0,
-  "startedAt": 1776222923690,
-  "lastSavedAt": 1776222923690
+  "startedAt": 1776222924772,
+  "lastSavedAt": 1776222924772
 }
