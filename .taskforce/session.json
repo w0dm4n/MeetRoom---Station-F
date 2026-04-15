@@ -1,14 +1,15 @@
 {
   "version": 1,
-  "prompt": "(workspace — preparing assets)",
+  "prompt": "This is a landing page for MeetRoom-Station-F. Rewrite the home page wording to have a more professional, polished tone while keeping the same structure and layout. Apply these changes to the home page content.",
   "options": {
     "outputDir": "/data/projects/taskforce-f597e079-65de-4af4-ab70-f57277c9fcbd",
-    "maxAgents": 0,
-    "model": "none",
-    "ceoModel": "none"
+    "gitUrl": "https://github.com/w0dm4n/MeetRoom---Station-F.git",
+    "maxAgents": 3,
+    "model": "claude-sonnet-4-6",
+    "ceoModel": "claude-sonnet-4-6"
   },
   "projectPath": "/data/projects/taskforce-f597e079-65de-4af4-ab70-f57277c9fcbd",
-  "phase": "preparation",
+  "phase": "done",
   "agents": [],
   "namePool": [],
   "nameIndex": 0,
@@ -16,6 +17,6 @@
   "kanbanCounter": 0,
   "previewPort": null,
   "sprintNumber": 0,
-  "startedAt": 1776221799941,
-  "lastSavedAt": 1776221799941
+  "startedAt": 1776221801014,
+  "lastSavedAt": 1776221801014
 }
