@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ed5565;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:0.4" />
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="2" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="800" fill="url(#bgGrad)" />
+
+  <!-- Architectural lines - perspective grid -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1" fill="none">
+    <!-- Horizontal lines -->
+    <line x1="0" y1="200" x2="1600" y2="200" />
+    <line x1="0" y1="350" x2="1600" y2="350" />
+    <line x1="0" y1="500" x2="1600" y2="500" />
+    <line x1="0" y1="650" x2="1600" y2="650" />
+    <!-- Vertical lines -->
+    <line x1="200" y1="0" x2="200" y2="800" />
+    <line x1="400" y1="0" x2="400" y2="800" />
+    <line x1="600" y1="0" x2="600" y2="800" />
+    <line x1="800" y1="0" x2="800" y2="800" />
+    <line x1="1000" y1="0" x2="1000" y2="800" />
+    <line x1="1200" y1="0" x2="1200" y2="800" />
+    <line x1="1400" y1="0" x2="1400" y2="800" />
+  </g>
+
+  <!-- Abstract building silhouette -->
+  <g opacity="0.15" fill="#ffffff">
+    <!-- Left building block -->
+    <rect x="50" y="400" width="120" height="400" />
+    <rect x="80" y="340" width="60" height="60" />
+    <rect x="60" y="390" width="20" height="10" />
+    <!-- Windows left building -->
+    <rect x="65" y="410" width="15" height="20" fill="#ed5565" opacity="0.6" />
+    <rect x="90" y="410" width="15" height="20" fill="#ed5565" opacity="0.6" />
+    <rect x="115" y="410" width="15" height="20" fill="#ed5565" opacity="0.6" />
+    <rect x="65" y="445" width="15" height="20" fill="#ffffff" opacity="0.4" />
+    <rect x="90" y="445" width="15" height="20" fill="#ffffff" opacity="0.4" />
+    <rect x="115" y="445" width="15" height="20" fill="#ed5565" opacity="0.6" />
+    <rect x="65" y="480" width="15" height="20" fill="#ffffff" opacity="0.4" />
+    <rect x="90" y="480" width="15" height="20" fill="#ed5565" opacity="0.6" />
+    <rect x="115" y="480" width="15" height="20" fill="#ffffff" opacity="0.4" />
+
+    <!-- Center tower -->
+    <rect x="700" y="150" width="200" height="650" />
+    <rect x="730" y="100" width="140" height="50" />
+    <rect x="770" y="60" width="60" height="40" />
+    <!-- Center tower windows -->
+    <rect x="720" y="170" width="25" height="35" fill="#ed5565" opacity="0.5" />
+    <rect x="760" y="170" width="25" height="35" fill="#ffffff" opacity="0.3" />
+    <rect x="800" y="170" width="25" height="35" fill="#ed5565" opacity="0.5" />
+    <rect x="840" y="170" width="25" height="35" fill="#ffffff" opacity="0.3" />
+    <rect x="720" y="220" width="25" height="35" fill="#ffffff" opacity="0.3" />
+    <rect x="760" y="220" width="25" height="35" fill="#ed5565" opacity="0.5" />
+    <rect x="800" y="220" width="25" height="35" fill="#ffffff" opacity="0.3" />
+    <rect x="840" y="220" width="25" height="35" fill="#ed5565" opacity="0.5" />
+
+    <!-- Right building -->
+    <rect x="1400" y="300" width="160" height="500" />
+    <rect x="1420" y="250" width="120" height="50" />
+    <!-- Right building windows -->
+    <rect x="1415" y="320" width="20" height="25" fill="#ed5565" opacity="0.5" />
+    <rect x="1450" y="320" width="20" height="25" fill="#ffffff" opacity="0.3" />
+    <rect x="1485" y="320" width="20" height="25" fill="#ed5565" opacity="0.5" />
+    <rect x="1520" y="320" width="20" height="25" fill="#ffffff" opacity="0.3" />
+  </g>
+
+  <!-- Accent stripe -->
+  <rect x="0" y="0" width="6" height="800" fill="#ed5565" opacity="0.7" />
+
+  <!-- Warm light glow center -->
+  <ellipse cx="800" cy="400" rx="600" ry="300" fill="#ed5565" opacity="0.04" />
+  <ellipse cx="800" cy="400" rx="300" ry="150" fill="#ed5565" opacity="0.06" />
+
+  <!-- Decorative dots pattern -->
+  <g opacity="0.12" fill="#ffffff">
+    <circle cx="300" cy="100" r="2" />
+    <circle cx="320" cy="120" r="1.5" />
+    <circle cx="280" cy="130" r="1" />
+    <circle cx="1300" cy="100" r="2" />
+    <circle cx="1320" cy="80" r="1.5" />
+    <circle cx="1280" cy="120" r="1" />
+    <circle cx="150" cy="250" r="1.5" />
+    <circle cx="170" cy="230" r="1" />
+    <circle cx="1450" cy="250" r="1.5" />
+    <circle cx="1470" cy="270" r="1" />
+  </g>
+</svg>

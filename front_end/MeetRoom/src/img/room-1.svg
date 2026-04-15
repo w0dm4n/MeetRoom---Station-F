@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="280" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="roomGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50" />
+      <stop offset="100%" style="stop-color:#34495e" />
+    </linearGradient>
+  </defs>
+  <!-- Room background -->
+  <rect width="400" height="280" fill="url(#roomGrad1)" />
+  <!-- Floor -->
+  <rect x="0" y="220" width="400" height="60" fill="#1a252f" />
+  <!-- Wall texture lines -->
+  <line x1="0" y1="60" x2="400" y2="60" stroke="#3d5166" stroke-width="1" opacity="0.5" />
+  <line x1="0" y1="120" x2="400" y2="120" stroke="#3d5166" stroke-width="1" opacity="0.3" />
+  <line x1="0" y1="180" x2="400" y2="180" stroke="#3d5166" stroke-width="1" opacity="0.3" />
+  <!-- Window -->
+  <rect x="280" y="20" width="100" height="140" fill="#87ceeb" opacity="0.3" rx="2" />
+  <rect x="280" y="20" width="100" height="140" fill="none" stroke="#c0a882" stroke-width="3" />
+  <line x1="330" y1="20" x2="330" y2="160" stroke="#c0a882" stroke-width="2" />
+  <line x1="280" y1="90" x2="380" y2="90" stroke="#c0a882" stroke-width="2" />
+  <!-- Light effect from window -->
+  <polygon points="280,20 380,20 320,220 200,220" fill="#f5e6c8" opacity="0.08" />
+  <!-- Conference table -->
+  <ellipse cx="180" cy="210" rx="140" ry="25" fill="#8B6914" />
+  <rect x="50" y="195" width="260" height="20" fill="#a07820" rx="3" />
+  <!-- Table legs -->
+  <rect x="80" y="215" width="8" height="30" fill="#6b5010" />
+  <rect x="310" y="215" width="8" height="30" fill="#6b5010" />
+  <!-- Chairs suggestion -->
+  <rect x="30" y="175" width="40" height="30" fill="#c0392b" rx="3" opacity="0.8" />
+  <rect x="90" y="165" width="35" height="25" fill="#c0392b" rx="3" opacity="0.8" />
+  <rect x="150" y="162" width="35" height="25" fill="#c0392b" rx="3" opacity="0.8" />
+  <rect x="215" y="162" width="35" height="25" fill="#c0392b" rx="3" opacity="0.8" />
+  <rect x="275" y="165" width="35" height="25" fill="#c0392b" rx="3" opacity="0.8" />
+  <rect x="325" y="175" width="40" height="30" fill="#c0392b" rx="3" opacity="0.8" />
+  <!-- Projector screen on wall -->
+  <rect x="100" y="15" width="160" height="100" fill="#f0f0f0" opacity="0.9" rx="2" />
+  <rect x="100" y="15" width="160" height="100" fill="none" stroke="#888" stroke-width="2" />
+  <rect x="105" y="20" width="150" height="90" fill="#e8e8e8" />
+  <!-- Screen content hint -->
+  <rect x="115" y="30" width="60" height="8" fill="#ed5565" opacity="0.6" rx="1" />
+  <rect x="115" y="45" width="100" height="5" fill="#999" opacity="0.5" rx="1" />
+  <rect x="115" y="56" width="80" height="5" fill="#999" opacity="0.5" rx="1" />
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="280" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="roomGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e" />
+      <stop offset="100%" style="stop-color:#16213e" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" fill="url(#roomGrad2)" />
+  <!-- Floor -->
+  <rect x="0" y="230" width="400" height="50" fill="#0d0d1a" />
+  <!-- Ceiling lights -->
+  <circle cx="133" cy="15" r="12" fill="#f5e6a3" opacity="0.9" />
+  <circle cx="267" cy="15" r="12" fill="#f5e6a3" opacity="0.9" />
+  <!-- Light cones -->
+  <polygon points="121,27 145,27 180,230 80,230" fill="#f5e6a3" opacity="0.05" />
+  <polygon points="255,27 279,27 320,230 220,230" fill="#f5e6a3" opacity="0.05" />
+  <!-- Back wall feature - decorative panels -->
+  <rect x="20" y="40" width="80" height="180" fill="#1e2d40" rx="2" />
+  <rect x="25" y="45" width="70" height="170" fill="#253040" rx="1" />
+  <rect x="160" y="40" width="80" height="180" fill="#1e2d40" rx="2" />
+  <rect x="165" y="45" width="70" height="170" fill="#253040" rx="1" />
+  <rect x="300" y="40" width="80" height="180" fill="#1e2d40" rx="2" />
+  <rect x="305" y="45" width="70" height="170" fill="#253040" rx="1" />
+  <!-- Round table -->
+  <ellipse cx="200" cy="200" rx="100" ry="20" fill="#3d2b1f" />
+  <ellipse cx="200" cy="195" rx="100" ry="18" fill="#5c3d2e" />
+  <!-- Table leg -->
+  <rect x="195" y="213" width="10" height="30" fill="#3d2b1f" />
+  <ellipse cx="200" cy="243" rx="25" ry="6" fill="#2a1f15" />
+  <!-- Chairs around table -->
+  <rect x="120" y="168" width="30" height="20" fill="#ed5565" rx="2" opacity="0.9" />
+  <rect x="175" y="162" width="30" height="20" fill="#ed5565" rx="2" opacity="0.9" />
+  <rect x="245" y="162" width="30" height="20" fill="#ed5565" rx="2" opacity="0.9" />
+  <rect x="250" y="168" width="30" height="20" fill="#ed5565" rx="2" opacity="0.9" />
+  <!-- Whiteboard on back wall -->
+  <rect x="110" y="50" width="180" height="110" fill="#f8f8f8" rx="3" opacity="0.95" />
+  <rect x="110" y="50" width="180" height="110" fill="none" stroke="#ccc" stroke-width="2" />
+  <rect x="115" y="55" width="170" height="100" fill="#fafafa" />
+  <line x1="125" y1="80" x2="275" y2="80" stroke="#ed5565" stroke-width="2" opacity="0.7" />
+  <line x1="125" y1="100" x2="240" y2="100" stroke="#ccc" stroke-width="1.5" opacity="0.7" />
+  <line x1="125" y1="115" x2="260" y2="115" stroke="#ccc" stroke-width="1.5" opacity="0.7" />
+  <line x1="125" y1="130" x2="220" y2="130" stroke="#ccc" stroke-width="1.5" opacity="0.7" />
+</svg>
