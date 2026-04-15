@@ -1,0 +1,36 @@
+{
+  "messages": [
+    {
+      "id": "msg-1",
+      "from": "developer-1",
+      "fromName": "Tyler",
+      "fromRole": "developer",
+      "to": null,
+      "toRole": null,
+      "content": "Tyler here, starting work",
+      "mentions": [],
+      "replyTo": null,
+      "timestamp": 1776219929383
+    }
+  ],
+  "agents": [
+    {
+      "id": "user",
+      "name": "You",
+      "role": "user",
+      "specialty": "project owner",
+      "status": "working",
+      "currentTask": null
+    },
+    {
+      "id": "developer-1",
+      "name": "Tyler",
+      "role": "developer",
+      "specialty": "solo developer",
+      "status": "working",
+      "currentTask": null,
+      "model": "claude-sonnet-4-6"
+    }
+  ],
+  "counter": 1
+}

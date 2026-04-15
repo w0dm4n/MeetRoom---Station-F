@@ -1,0 +1,65 @@
+{
+  "memories": [
+    {
+      "id": "mem-1",
+      "title": "Completed: Improve the overall UI/UX of this existing website. Review the current codeba...",
+      "text": "Task \"Improve the overall UI/UX of this existing website. Review the current codeba...\" was approved.\nDescription: Improve the overall UI/UX of this existing website. Review the current codebase, identify pain points (layout, typography, color contrast, spacing, responsiveness, navigation flow, accessibility), and implement a polished, modern redesign. The end result should feel cohesive, professional, and visually refined.",
+      "tags": [
+        "auto-approved",
+        "task-completion"
+      ],
+      "type": "observation",
+      "agentId": "developer-1",
+      "agentRole": "developer",
+      "agentName": "Tyler",
+      "sprintNumber": 1,
+      "timestamp": 1776220434256
+    },
+    {
+      "id": "mem-2",
+      "title": "Static site redesign pattern: CSS custom properties design system",
+      "text": "When rebuilding a legacy Angular/Bootstrap app as a static vanilla HTML/CSS/JS site, use CSS custom properties as the entire design system (no framework needed). Define tokens for: colors (primary, surface, text, border, status), typography (font-family, sizes xs-5xl, weights, line-heights), spacing (--space-1 through --space-24), shadows (xs-xl), radii, and transitions. Components styled as BEM-like selectors referencing these tokens. This approach gives full control with zero dependencies and works by opening index.html directly.",
+      "tags": [
+        "css",
+        "design-system",
+        "vanilla",
+        "static",
+        "accessibility",
+        "redesign"
+      ],
+      "type": "pattern",
+      "agentId": "developer-1",
+      "agentRole": "developer",
+      "agentName": "Tyler",
+      "sprintNumber": 1,
+      "timestamp": 1776220444184
+    }
+  ],
+  "counter": 2,
+  "qvalues": {
+    "mem-1": {
+      "utility": 0.5,
+      "consultCount": 0,
+      "positiveSignals": 0,
+      "negativeSignals": 0,
+      "lastUpdated": 1776220434256,
+      "generalizable": false,
+      "promotedToGlobal": false
+    },
+    "mem-2": {
+      "utility": 0.6,
+      "consultCount": 0,
+      "positiveSignals": 0,
+      "negativeSignals": 0,
+      "lastUpdated": 1776220444184,
+      "generalizable": true,
+      "promotedToGlobal": true
+    }
+  },
+  "triples": {
+    "mem-2": {
+      "intent": "Replacing a complex framework app with a maintainable, token-driven pure CSS design system",
+      "experience": "Built MeetRoom redesign — design system with 50+ tokens across 600 lines of component CSS. CSS balanced (249/249 braces). No build step, no npm, works by opening index.html."
+    }
+  }
+}
