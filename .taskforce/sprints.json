@@ -1,4 +1,38 @@
 {
   "currentSprintNumber": 0,
-  "sprints": []
+  "sprints": [
+    {
+      "sprintNumber": 0,
+      "type": "patch",
+      "prompt": "Improve the home page UI/UX",
+      "tasks": [
+        {
+          "id": "task-1",
+          "title": "Improve the home page UI/UX",
+          "description": "Improve the home page UI/UX",
+          "status": "done",
+          "priority": "high",
+          "assignee": "developer-1",
+          "assigneeRole": "developer",
+          "dependencies": [],
+          "files": [],
+          "branch": "agent/developer-1",
+          "createdBy": "system",
+          "checkResult": "Fully redesigned the MeetRoom home page from a bare 8-line placeholder into a complete, polished multi-section landing page.\n\nChanges made:\n\nhome.html (413 lines):\n- Hero section: full-viewport dark background with SVG cityscape, animated availability badge, large headline with accent color, subtitle, dual CTA buttons (Browse Rooms / My Reservations), stats bar (12+ rooms, 50+ capacity, 24/7 booking), scroll hint\n- How It Works: 3-step cards (Browse, Pick a Date, Confirm & Meet) with SVG icons; middle card features dark highlight treatment\n- Featured Spaces: 3 room cards with illustrated SVG images, capacity badge, feature tags (Wi-Fi, Video Call, 4K Display, etc.), reserve buttons, hover lift effect; \"Most Popular\" badge on first card\n- Everything You Need: 8 amenity cards in 4-col grid with SVG icons (Wi-Fi, Video, Whiteboard, Catering, Displays, Mobile, Security, Flexible Hours)\n- CTA Strip: red background with bold call-to-action and arrow button\n- Rich footer: brand, tagline, social links, navigation, room types, contact info, bottom bar\n\nheader.html: Fixed position with backdrop-blur, brand name with red accent span, \"Book a Room\" CTA button in nav\n\nstyle.css: 870+ lines of new CSS — all sections styled with transitions, hover states, responsive breakpoints at 991px and 767px\n\nAssets created: hero-bg.svg (architectural cityscape), room-1.svg, room-2.svg, room-3.svg (conference room illustrations)",
+          "createdAt": 1776222924809,
+          "updatedAt": 1776223366340
+        }
+      ],
+      "stats": {
+        "todo": 0,
+        "in_progress": 0,
+        "to_check": 0,
+        "done": 1,
+        "total": 1
+      },
+      "testChecks": [],
+      "startedAt": 1776222924797,
+      "completedAt": 1776223380205
+    }
+  ]
 }

@@ -1,0 +1,93 @@
+{
+  "memories": [
+    {
+      "id": "mem-1",
+      "title": "Repeated command pattern: ls -la *",
+      "text": "This command pattern was executed 3+ times during task work.\n\nExamples:\n  $ ls -la /data/projects/taskforce-b845bf76-2893-4302-9a96-0f069508913f\n  $ ls -la /data/projects/taskforce-b845bf76-2893-4302-9a96-0f069508913f/front_end/MeetRoom/src/app/pages/rooms/\n  $ ls -la /data/projects/taskforce-b845bf76-2893-4302-9a96-0f069508913f/front_end/MeetRoom/src/css/\n\nConsider creating a script, alias, or combining these into a single operation to avoid redundancy.",
+      "tags": [
+        "auto-detected",
+        "redundancy",
+        "optimization",
+        "ls"
+      ],
+      "type": "pattern",
+      "agentId": "developer-1",
+      "agentRole": "developer",
+      "agentName": "Caleb",
+      "sprintNumber": 1,
+      "timestamp": 1776222968583
+    },
+    {
+      "id": "mem-2",
+      "title": "Angular 4 templateUrl resolves relative to index.html, not component file",
+      "text": "In Angular 4 with SystemJS (no CLI, no webpack), templateUrl paths are resolved relative to the serving root (where index.html is), not the component file location. So a component in src/app/pages/home/home.ts with templateUrl: \"views/pages/home.html\" works because views/ is a sibling of index.html in src/. This means you can safely edit .html template files without recompiling TypeScript.",
+      "tags": [
+        "angular4",
+        "systemjs",
+        "templateurl",
+        "no-webpack"
+      ],
+      "type": "pattern",
+      "agentId": "developer-1",
+      "agentRole": "developer",
+      "agentName": "Caleb",
+      "sprintNumber": 1,
+      "timestamp": 1776223353347
+    },
+    {
+      "id": "mem-3",
+      "title": "Completed: Improve the home page UI/UX",
+      "text": "Task \"Improve the home page UI/UX\" was approved.\nDescription: Improve the home page UI/UX",
+      "tags": [
+        "auto-approved",
+        "task-completion"
+      ],
+      "type": "observation",
+      "agentId": "developer-1",
+      "agentRole": "developer",
+      "agentName": "Caleb",
+      "sprintNumber": 1,
+      "timestamp": 1776223366340
+    }
+  ],
+  "counter": 3,
+  "qvalues": {
+    "mem-1": {
+      "utility": 0.6,
+      "consultCount": 0,
+      "positiveSignals": 0,
+      "negativeSignals": 0,
+      "lastUpdated": 1776222968583,
+      "generalizable": true,
+      "promotedToGlobal": true
+    },
+    "mem-2": {
+      "utility": 0.6,
+      "consultCount": 0,
+      "positiveSignals": 0,
+      "negativeSignals": 0,
+      "lastUpdated": 1776223353347,
+      "generalizable": true,
+      "promotedToGlobal": false
+    },
+    "mem-3": {
+      "utility": 0.5,
+      "consultCount": 0,
+      "positiveSignals": 0,
+      "negativeSignals": 0,
+      "lastUpdated": 1776223366340,
+      "generalizable": false,
+      "promotedToGlobal": false
+    }
+  },
+  "triples": {
+    "mem-1": {
+      "intent": "Auto-detected redundant command pattern that could be optimized",
+      "experience": "Command \"ls -la *\" was repeated 3+ times — suggests a batch operation or script would be more efficient"
+    },
+    "mem-2": {
+      "intent": "Understand how Angular 4 SystemJS apps resolve template paths so I can edit templates safely",
+      "experience": "Successfully edited home.html and header.html without touching TypeScript or rebuilding — the app loads templates via HTTP at runtime"
+    }
+  }
+}

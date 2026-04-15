@@ -1,0 +1,48 @@
+{
+  "messages": [
+    {
+      "id": "msg-1",
+      "from": "developer-1",
+      "fromName": "Caleb",
+      "fromRole": "developer",
+      "to": null,
+      "toRole": null,
+      "content": "Caleb here, starting work",
+      "mentions": [],
+      "replyTo": null,
+      "timestamp": 1776222928126
+    },
+    {
+      "id": "msg-2",
+      "from": "developer-1",
+      "fromName": "Caleb",
+      "fromRole": "developer",
+      "to": null,
+      "toRole": null,
+      "content": "Project complete. Home page redesigned with hero, room cards, amenities, CTA strip, and rich footer.",
+      "mentions": [],
+      "replyTo": null,
+      "timestamp": 1776223372523
+    }
+  ],
+  "agents": [
+    {
+      "id": "user",
+      "name": "You",
+      "role": "user",
+      "specialty": "project owner",
+      "status": "working",
+      "currentTask": null
+    },
+    {
+      "id": "developer-1",
+      "name": "Caleb",
+      "role": "developer",
+      "specialty": "solo developer",
+      "status": "working",
+      "currentTask": null,
+      "model": "claude-sonnet-4-6"
+    }
+  ],
+  "counter": 2
+}
