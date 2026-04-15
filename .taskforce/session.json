@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "prompt": "(workspace — preparing assets)",
+  "options": {
+    "outputDir": "/data/projects/taskforce-b845bf76-2893-4302-9a96-0f069508913f",
+    "maxAgents": 0,
+    "model": "none",
+    "ceoModel": "none"
+  },
+  "projectPath": "/data/projects/taskforce-b845bf76-2893-4302-9a96-0f069508913f",
+  "phase": "preparation",
+  "agents": [],
+  "namePool": [],
+  "nameIndex": 0,
+  "chatCounter": 0,
+  "kanbanCounter": 0,
+  "previewPort": null,
+  "sprintNumber": 0,
+  "startedAt": 1776222923690,
+  "lastSavedAt": 1776222923690
+}

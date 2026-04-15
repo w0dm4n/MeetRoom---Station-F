@@ -1,0 +1,23 @@
+{
+  "archivedSprints": [],
+  "roadmap": null,
+  "totalPlannedSprints": 0,
+  "mergerLogs": [],
+  "testChecks": [],
+  "screenshots": [],
+  "assets": [],
+  "maxAgents": 3,
+  "autoMode": false,
+  "proMode": false,
+  "skipBugTester": false,
+  "skipShipper": false,
+  "skipFinalTester": false,
+  "developerCount": 1,
+  "designerCount": null,
+  "promptCaching": false,
+  "useHaikuForWorkers": false,
+  "ollamaBaseUrl": "https://ollama.com",
+  "ollamaApiKey": "8d7e76f77b6640d796d2d2a47a5078fb.ZHfjF7-VuDxcJoAHYwMHXZUU",
+  "gitUrl": "https://github.com/w0dm4n/MeetRoom---Station-F.git",
+  "gitBranch": "master"
+}
